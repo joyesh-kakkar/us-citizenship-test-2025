@@ -1,0 +1,23 @@
+{
+  "version": "2026-08-23",
+  "updatedAt": "2026-08-23",
+  "note": "Volatile answers change with elections/appointments. Verified current as of 2026-08-23; USCIS requires the official serving at the time of the applicant's interview, so keep this synced with uscis.gov/citizenship/testupdates (host a copy at kRemoteConfigUrl to push updates without an app release).",
+  "answers": {
+    "president": {
+      "correct": ["Donald J. Trump", "Donald Trump"],
+      "distractors": ["Joe Biden", "Barack Obama", "Kamala Harris", "George W. Bush"]
+    },
+    "vicePresident": {
+      "correct": ["JD Vance", "J.D. Vance"],
+      "distractors": ["Kamala Harris", "Mike Pence", "Tim Walz", "Joe Biden"]
+    },
+    "speaker": {
+      "correct": ["Mike Johnson", "Michael Johnson"],
+      "distractors": ["Nancy Pelosi", "Kevin McCarthy", "Hakeem Jeffries", "Steve Scalise"]
+    },
+    "chiefJustice": {
+      "correct": ["John Roberts", "John G. Roberts, Jr."],
+      "distractors": ["Clarence Thomas", "Samuel Alito", "Brett Kavanaugh", "Neil Gorsuch"]
+    }
+  }
+}

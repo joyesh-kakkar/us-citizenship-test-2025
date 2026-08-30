@@ -1,0 +1,2703 @@
+{
+  "meta": {
+    "title": "USCIS 2025 Civics Test — 128 Questions",
+    "source": "USCIS 128 Civics Questions and Answers (2025 version), M-1778 (09/25)",
+    "studyGuide": "One Nation, One People: The USCIS 2025 Civics Test Study Guide (M-1175)",
+    "version": "2025",
+    "totalQuestions": 128,
+    "passing": {
+      "standard": {
+        "askedUpTo": 20,
+        "needToPass": 12
+      },
+      "special6520": {
+        "asked": 10,
+        "needToPass": 6,
+        "eligibility": "Age 65+ and lawful permanent resident 20+ years; may study only starred questions and test in their chosen language."
+      }
+    },
+    "notes": [
+      "Distractors (wrong answers) are authored for MCQ use and are NOT official USCIS content.",
+      "The real USCIS test is oral and free-recall; MCQ is a study aid.",
+      "answerType 'volatile' answers come from remote config (uscis.gov/citizenship/testupdates).",
+      "answerType 'variesByState' answers come from a per-state dataset set by the user's state.",
+      "Some questions have multiple official correct answers; serve one as correct and draw wrong options from 'distractors'."
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "What is the form of government of the United States?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Republic",
+        "Constitution-based federal republic",
+        "Representative democracy"
+      ],
+      "distractors": [
+        "Direct democracy",
+        "Monarchy",
+        "Confederation",
+        "Dictatorship"
+      ],
+      "explanation": "The U.S. is a republic where citizens elect representatives; power is defined and limited by the Constitution."
+    },
+    {
+      "id": 2,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "What is the supreme law of the land?",
+      "type": "document",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "(U.S.) Constitution"
+      ],
+      "distractors": [
+        "The Declaration of Independence",
+        "The Bill of Rights",
+        "Federal laws passed by Congress",
+        "The Articles of Confederation"
+      ],
+      "explanation": "The Constitution is the highest law; all other laws must agree with it."
+    },
+    {
+      "id": 3,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "Name one thing the U.S. Constitution does.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Forms the government",
+        "Defines powers of government",
+        "Defines the parts of government",
+        "Protects the rights of the people"
+      ],
+      "distractors": [
+        "Declares independence from Britain",
+        "Frees the slaves",
+        "Lists the original 13 colonies",
+        "Sets the date of Thanksgiving"
+      ],
+      "explanation": "The Constitution sets up the government, defines its powers and parts, and protects people's rights."
+    },
+    {
+      "id": 4,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "The U.S. Constitution starts with the words “We the People.” What does “We the People” mean?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Self-government",
+        "Popular sovereignty",
+        "Consent of the governed",
+        "People should govern themselves",
+        "(Example of) social contract"
+      ],
+      "distractors": [
+        "Rule by a monarch",
+        "Power belongs only to the states",
+        "Government by the wealthy",
+        "Only people born here have rights"
+      ],
+      "explanation": "“We the People” expresses self-government: the people, not a king, hold power."
+    },
+    {
+      "id": 5,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "How are changes made to the U.S. Constitution?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Amendments",
+        "The amendment process"
+      ],
+      "distractors": [
+        "Executive orders",
+        "Supreme Court rulings",
+        "Acts of the President alone",
+        "A yearly national vote"
+      ],
+      "explanation": "The Constitution is changed through amendments."
+    },
+    {
+      "id": 6,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "What does the Bill of Rights protect?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(The basic) rights of Americans",
+        "(The basic) rights of people living in the United States"
+      ],
+      "distractors": [
+        "The powers of the President",
+        "The right of states to secede",
+        "The federal budget",
+        "The nation's borders"
+      ],
+      "explanation": "The Bill of Rights (first 10 amendments) protects basic individual rights."
+    },
+    {
+      "id": 7,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "How many amendments does the U.S. Constitution have?",
+      "type": "numeric",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Twenty-seven (27)"
+      ],
+      "distractors": [
+        "Ten (10)",
+        "Thirteen (13)",
+        "Fifty (50)",
+        "Twenty-six (26)"
+      ],
+      "explanation": "There are 27 amendments to the Constitution."
+    },
+    {
+      "id": 8,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "Why is the Declaration of Independence important?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "It says America is free from British control.",
+        "It says all people are created equal.",
+        "It identifies inherent rights.",
+        "It identifies individual freedoms."
+      ],
+      "distractors": [
+        "It sets up the three branches of government.",
+        "It is the supreme law of the land.",
+        "It created the Bill of Rights.",
+        "It ended slavery."
+      ],
+      "explanation": "The Declaration announced independence and stated that all people have inherent rights."
+    },
+    {
+      "id": 9,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "What founding document said the American colonies were free from Britain?",
+      "type": "document",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Declaration of Independence"
+      ],
+      "distractors": [
+        "The Constitution",
+        "The Bill of Rights",
+        "The Articles of Confederation",
+        "The Emancipation Proclamation"
+      ],
+      "explanation": "The Declaration of Independence (1776) announced freedom from Britain."
+    },
+    {
+      "id": 10,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "Name two important ideas from the Declaration of Independence and the U.S. Constitution.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Equality",
+        "Liberty",
+        "Social contract",
+        "Natural rights",
+        "Limited government",
+        "Self-government"
+      ],
+      "distractors": [
+        "Manifest destiny",
+        "Isolationism",
+        "Segregation",
+        "Rule by a monarch"
+      ],
+      "explanation": "Core ideas include equality, liberty, natural rights, and limited, self-government."
+    },
+    {
+      "id": 11,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "The words “Life, Liberty, and the pursuit of Happiness” are in what founding document?",
+      "type": "document",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Declaration of Independence"
+      ],
+      "distractors": [
+        "The Constitution",
+        "The Bill of Rights",
+        "The Gettysburg Address",
+        "The Star-Spangled Banner"
+      ],
+      "explanation": "That phrase appears in the Declaration of Independence."
+    },
+    {
+      "id": 12,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "What is the economic system of the United States?",
+      "type": "concept",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Capitalism",
+        "Free market economy"
+      ],
+      "distractors": [
+        "Socialism",
+        "Communism",
+        "Command economy",
+        "Feudalism"
+      ],
+      "explanation": "The U.S. has a capitalist, free-market economy."
+    },
+    {
+      "id": 13,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "What is the rule of law?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Everyone must follow the law.",
+        "Leaders must obey the law.",
+        "Government must obey the law.",
+        "No one is above the law."
+      ],
+      "distractors": [
+        "The President can change any law.",
+        "Only citizens must follow the law.",
+        "Judges make all the laws.",
+        "The military enforces all laws."
+      ],
+      "explanation": "Rule of law means everyone — including leaders and government — must follow the law."
+    },
+    {
+      "id": 14,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "Many documents influenced the U.S. Constitution. Name one.",
+      "type": "document",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Declaration of Independence",
+        "Articles of Confederation",
+        "Federalist Papers",
+        "Anti-Federalist Papers",
+        "Virginia Declaration of Rights",
+        "Fundamental Orders of Connecticut",
+        "Mayflower Compact",
+        "Iroquois Great Law of Peace"
+      ],
+      "distractors": [
+        "The Emancipation Proclamation",
+        "The Gettysburg Address",
+        "The Monroe Doctrine",
+        "The Treaty of Paris"
+      ],
+      "explanation": "Several earlier documents, like the Articles of Confederation and Federalist Papers, influenced the Constitution."
+    },
+    {
+      "id": 15,
+      "category": "American Government",
+      "subcategory": "Principles of American Government",
+      "question": "There are three branches of government. Why?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "So one part does not become too powerful",
+        "Checks and balances",
+        "Separation of powers"
+      ],
+      "distractors": [
+        "To make laws faster",
+        "To give the President more power",
+        "To represent each political party",
+        "To divide the country into regions"
+      ],
+      "explanation": "Three branches separate power so no single branch becomes too powerful."
+    },
+    {
+      "id": 16,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Name the three branches of government.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Legislative, executive, and judicial",
+        "Congress, president, and the courts"
+      ],
+      "distractors": [
+        "Federal, state, and local",
+        "House, Senate, and President",
+        "Army, Navy, and Air Force",
+        "Executive, Senate, and Supreme Court"
+      ],
+      "explanation": "The three branches are legislative (Congress), executive (President), and judicial (courts)."
+    },
+    {
+      "id": 17,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "The President of the United States is in charge of which branch of government?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Executive branch"
+      ],
+      "distractors": [
+        "Legislative branch",
+        "Judicial branch",
+        "Congress",
+        "The Supreme Court"
+      ],
+      "explanation": "The President leads the executive branch."
+    },
+    {
+      "id": 18,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What part of the federal government writes laws?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(U.S.) Congress",
+        "(U.S. or national) legislature",
+        "Legislative branch"
+      ],
+      "distractors": [
+        "The President",
+        "The Supreme Court",
+        "The Cabinet",
+        "The states"
+      ],
+      "explanation": "Congress — the legislative branch — writes federal laws."
+    },
+    {
+      "id": 19,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What are the two parts of the U.S. Congress?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Senate and House (of Representatives)"
+      ],
+      "distractors": [
+        "The House and the Cabinet",
+        "The Senate and the Supreme Court",
+        "The President and the Vice President",
+        "The federal and state legislatures"
+      ],
+      "explanation": "Congress has two parts: the Senate and the House of Representatives."
+    },
+    {
+      "id": 20,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Name one power of the U.S. Congress.",
+      "type": "concept",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Writes laws",
+        "Declares war",
+        "Makes the federal budget"
+      ],
+      "distractors": [
+        "Vetoes bills",
+        "Appoints federal judges",
+        "Commands the military",
+        "Interprets the Constitution"
+      ],
+      "explanation": "Congress writes laws, declares war, and makes the federal budget."
+    },
+    {
+      "id": 21,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How many U.S. senators are there?",
+      "type": "numeric",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "One hundred (100)"
+      ],
+      "distractors": [
+        "Fifty (50)",
+        "Four hundred thirty-five (435)",
+        "Nine (9)",
+        "Five hundred thirty-eight (538)"
+      ],
+      "explanation": "There are 100 senators — two from each of the 50 states."
+    },
+    {
+      "id": 22,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How long is a term for a U.S. senator?",
+      "type": "numeric",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Six (6) years"
+      ],
+      "distractors": [
+        "Two (2) years",
+        "Four (4) years",
+        "Eight (8) years",
+        "For life"
+      ],
+      "explanation": "A U.S. senator serves a 6-year term."
+    },
+    {
+      "id": 23,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who is one of your state’s U.S. senators now?",
+      "type": "varies",
+      "starred": false,
+      "answerType": "variesByState",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "Answer with a current U.S. senator from your state. (D.C. and territory residents have no U.S. senators.)",
+      "stateField": "senator"
+    },
+    {
+      "id": 24,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How many voting members are in the House of Representatives?",
+      "type": "numeric",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Four hundred thirty-five (435)"
+      ],
+      "distractors": [
+        "One hundred (100)",
+        "Fifty (50)",
+        "Five hundred thirty-eight (538)",
+        "Two hundred seventy (270)"
+      ],
+      "explanation": "The House has 435 voting members."
+    },
+    {
+      "id": 25,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How long is a term for a member of the House of Representatives?",
+      "type": "numeric",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Two (2) years"
+      ],
+      "distractors": [
+        "Four (4) years",
+        "Six (6) years",
+        "One (1) year",
+        "For life"
+      ],
+      "explanation": "A House member serves a 2-year term."
+    },
+    {
+      "id": 26,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Why do U.S. representatives serve shorter terms than U.S. senators?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "To more closely follow public opinion"
+      ],
+      "distractors": [
+        "Because there are more of them",
+        "To save money",
+        "Because they are limited to one term",
+        "So they can become senators faster"
+      ],
+      "explanation": "Shorter terms keep representatives closely tied to public opinion."
+    },
+    {
+      "id": 27,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How many senators does each state have?",
+      "type": "numeric",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Two (2)"
+      ],
+      "distractors": [
+        "One (1)",
+        "Three (3)",
+        "It depends on population",
+        "Four hundred thirty-five (435)"
+      ],
+      "explanation": "Each state has exactly two senators."
+    },
+    {
+      "id": 28,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Why does each state have two senators?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Equal representation (for small states)",
+        "The Great Compromise (Connecticut Compromise)"
+      ],
+      "distractors": [
+        "Because of population size",
+        "One for each political party",
+        "To match the number of branches",
+        "Because of the Bill of Rights"
+      ],
+      "explanation": "Two senators per state gives every state equal representation — the Great Compromise."
+    },
+    {
+      "id": 29,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Name your U.S. representative.",
+      "type": "varies",
+      "starred": false,
+      "answerType": "variesByState",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "Answer with your current U.S. representative. (Territory residents may name their Delegate/Commissioner or state they have no voting representative.)",
+      "stateField": "representative"
+    },
+    {
+      "id": 30,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What is the name of the Speaker of the House of Representatives now?",
+      "type": "volatile",
+      "starred": true,
+      "answerType": "volatile",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "This answer changes. Use the current Speaker as listed at uscis.gov/citizenship/testupdates.",
+      "remoteConfigKey": "speaker"
+    },
+    {
+      "id": 31,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who does a U.S. senator represent?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Citizens of their state",
+        "People of their state"
+      ],
+      "distractors": [
+        "The whole country",
+        "Their political party",
+        "The President",
+        "People in their city"
+      ],
+      "explanation": "A senator represents all the people of their state."
+    },
+    {
+      "id": 32,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who elects U.S. senators?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Citizens from their state"
+      ],
+      "distractors": [
+        "The state legislature",
+        "The President",
+        "The state governor",
+        "The Electoral College"
+      ],
+      "explanation": "Citizens of each state elect their senators (since the 17th Amendment)."
+    },
+    {
+      "id": 33,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who does a member of the House of Representatives represent?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Citizens in their (congressional) district",
+        "Citizens in their district",
+        "People from their (congressional) district",
+        "People in their district"
+      ],
+      "distractors": [
+        "The entire state",
+        "The whole country",
+        "Their political party",
+        "The governor"
+      ],
+      "explanation": "A representative represents the people of their congressional district."
+    },
+    {
+      "id": 34,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who elects members of the House of Representatives?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Citizens from their (congressional) district"
+      ],
+      "distractors": [
+        "The state legislature",
+        "The President",
+        "The governor",
+        "The Senate"
+      ],
+      "explanation": "Citizens of each congressional district elect their representative."
+    },
+    {
+      "id": 35,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Some states have more representatives than other states. Why?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Because of) the state’s population",
+        "(Because) they have more people",
+        "(Because) some states have more people"
+      ],
+      "distractors": [
+        "They have more land",
+        "They are older states",
+        "They pay more taxes",
+        "They have more senators"
+      ],
+      "explanation": "House seats are based on state population, so more populous states have more representatives."
+    },
+    {
+      "id": 36,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "The President of the United States is elected for how many years?",
+      "type": "numeric",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Four (4) years"
+      ],
+      "distractors": [
+        "Two (2) years",
+        "Six (6) years",
+        "Eight (8) years",
+        "For life"
+      ],
+      "explanation": "A President is elected to a 4-year term."
+    },
+    {
+      "id": 37,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "The President of the United States can serve only two terms. Why?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Because of) the 22nd Amendment",
+        "To keep the president from becoming too powerful"
+      ],
+      "distractors": [
+        "Because of the 1st Amendment",
+        "Because of the Bill of Rights",
+        "Because of the Great Compromise",
+        "Because senators serve longer"
+      ],
+      "explanation": "The 22nd Amendment limits a President to two terms."
+    },
+    {
+      "id": 38,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What is the name of the President of the United States now?",
+      "type": "volatile",
+      "starred": true,
+      "answerType": "volatile",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "This answer changes with elections. Use the current President as listed at uscis.gov/citizenship/testupdates.",
+      "remoteConfigKey": "president"
+    },
+    {
+      "id": 39,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What is the name of the Vice President of the United States now?",
+      "type": "volatile",
+      "starred": true,
+      "answerType": "volatile",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "This answer changes with elections. Use the current Vice President as listed at uscis.gov/citizenship/testupdates.",
+      "remoteConfigKey": "vicePresident"
+    },
+    {
+      "id": 40,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "If the president can no longer serve, who becomes president?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The Vice President (of the United States)"
+      ],
+      "distractors": [
+        "The Speaker of the House",
+        "The Secretary of State",
+        "The Chief Justice",
+        "The President's spouse"
+      ],
+      "explanation": "The Vice President becomes President if the President cannot serve."
+    },
+    {
+      "id": 41,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Name one power of the president.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Signs bills into law",
+        "Vetoes bills",
+        "Enforces laws",
+        "Commander in Chief (of the military)",
+        "Chief diplomat",
+        "Appoints federal judges"
+      ],
+      "distractors": [
+        "Writes laws",
+        "Declares war",
+        "Interprets the Constitution",
+        "Approves the federal budget"
+      ],
+      "explanation": "The President signs or vetoes bills, enforces laws, leads the military, and appoints judges."
+    },
+    {
+      "id": 42,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who is Commander in Chief of the U.S. military?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The President (of the United States)"
+      ],
+      "distractors": [
+        "The Secretary of Defense",
+        "A five-star general",
+        "The Vice President",
+        "The Chairman of the Joint Chiefs"
+      ],
+      "explanation": "The President is Commander in Chief of the military."
+    },
+    {
+      "id": 43,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who signs bills to become laws?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The President (of the United States)"
+      ],
+      "distractors": [
+        "The Speaker of the House",
+        "The Chief Justice",
+        "The Vice President",
+        "The Senate majority leader"
+      ],
+      "explanation": "The President signs bills into law."
+    },
+    {
+      "id": 44,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who vetoes bills?",
+      "type": "concept",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "The President (of the United States)"
+      ],
+      "distractors": [
+        "Congress",
+        "The Supreme Court",
+        "The Vice President",
+        "The Cabinet"
+      ],
+      "explanation": "The President can veto (reject) bills passed by Congress."
+    },
+    {
+      "id": 45,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who appoints federal judges?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The President (of the United States)"
+      ],
+      "distractors": [
+        "Congress",
+        "The Supreme Court",
+        "The voters",
+        "The Attorney General"
+      ],
+      "explanation": "The President appoints federal judges (the Senate confirms them)."
+    },
+    {
+      "id": 46,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "The executive branch has many parts. Name one.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "President (of the United States)",
+        "Cabinet",
+        "Federal departments and agencies"
+      ],
+      "distractors": [
+        "Congress",
+        "The Supreme Court",
+        "The Senate",
+        "State governors"
+      ],
+      "explanation": "The executive branch includes the President, the Cabinet, and federal departments and agencies."
+    },
+    {
+      "id": 47,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What does the President’s Cabinet do?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Advises the President (of the United States)"
+      ],
+      "distractors": [
+        "Writes laws",
+        "Approves Supreme Court justices",
+        "Commands the military",
+        "Elects the President"
+      ],
+      "explanation": "The Cabinet advises the President."
+    },
+    {
+      "id": 48,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What are two Cabinet-level positions?",
+      "type": "list",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Attorney General",
+        "Secretary of Agriculture",
+        "Secretary of Commerce",
+        "Secretary of Education",
+        "Secretary of Energy",
+        "Secretary of Health and Human Services",
+        "Secretary of Homeland Security",
+        "Secretary of Housing and Urban Development",
+        "Secretary of the Interior",
+        "Secretary of Labor",
+        "Secretary of State",
+        "Secretary of Transportation",
+        "Secretary of the Treasury",
+        "Secretary of Veterans Affairs",
+        "Secretary of War (Defense)",
+        "Vice-President",
+        "Administrator of the Environmental Protection Agency",
+        "Administrator of the Small Business Administration",
+        "Director of the Central Intelligence Agency",
+        "Director of the Office of Management and Budget",
+        "Director of National Intelligence",
+        "United States Trade Representative"
+      ],
+      "distractors": [
+        "Speaker of the House",
+        "Chief Justice of the Supreme Court",
+        "State Governor",
+        "U.S. Senator"
+      ],
+      "explanation": "Cabinet-level positions include the Attorney General and the various Secretaries; the Speaker, Chief Justice, and governors are not Cabinet members."
+    },
+    {
+      "id": 49,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Why is the Electoral College important?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "It decides who is elected president.",
+        "It provides a compromise between the popular election of the president and congressional selection."
+      ],
+      "distractors": [
+        "It writes the nation's laws.",
+        "It counts the population every ten years.",
+        "It chooses Supreme Court justices.",
+        "It approves treaties."
+      ],
+      "explanation": "The Electoral College decides who becomes President."
+    },
+    {
+      "id": 50,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What is one part of the judicial branch?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Supreme Court",
+        "Federal Courts"
+      ],
+      "distractors": [
+        "Congress",
+        "The Cabinet",
+        "The Senate",
+        "The Department of Justice"
+      ],
+      "explanation": "The judicial branch includes the Supreme Court and other federal courts."
+    },
+    {
+      "id": 51,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What does the judicial branch do?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Reviews laws",
+        "Explains laws",
+        "Resolves disputes (disagreements) about the law",
+        "Decides if a law goes against the (U.S.) Constitution"
+      ],
+      "distractors": [
+        "Writes laws",
+        "Enforces laws",
+        "Collects taxes",
+        "Commands the army"
+      ],
+      "explanation": "The judicial branch reviews and explains laws and decides if they violate the Constitution."
+    },
+    {
+      "id": 52,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What is the highest court in the United States?",
+      "type": "concept",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Supreme Court"
+      ],
+      "distractors": [
+        "The Federal Court of Appeals",
+        "The District Court",
+        "Congress",
+        "The Court of International Trade"
+      ],
+      "explanation": "The Supreme Court is the highest court in the country."
+    },
+    {
+      "id": 53,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How many seats are on the Supreme Court?",
+      "type": "numeric",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Nine (9)"
+      ],
+      "distractors": [
+        "Twelve (12)",
+        "Seven (7)",
+        "Six (6)",
+        "One hundred (100)"
+      ],
+      "explanation": "The Supreme Court has nine seats."
+    },
+    {
+      "id": 54,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How many Supreme Court justices are usually needed to decide a case?",
+      "type": "numeric",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Five (5)"
+      ],
+      "distractors": [
+        "Nine (9)",
+        "Six (6)",
+        "Three (3)",
+        "Two-thirds of them"
+      ],
+      "explanation": "A simple majority — five of nine — is usually needed to decide a case."
+    },
+    {
+      "id": 55,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "How long do Supreme Court justices serve?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(For) life",
+        "Lifetime appointment",
+        "(Until) retirement"
+      ],
+      "distractors": [
+        "Four (4) years",
+        "Six (6) years",
+        "Ten (10) years",
+        "Until the next president is elected"
+      ],
+      "explanation": "Supreme Court justices serve for life (a lifetime appointment)."
+    },
+    {
+      "id": 56,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Supreme Court justices serve for life. Why?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "To be independent (of politics)",
+        "To limit outside (political) influence"
+      ],
+      "distractors": [
+        "To save money on elections",
+        "Because they are elected for life",
+        "To keep them loyal to the President",
+        "Because the Constitution requires nine judges"
+      ],
+      "explanation": "Life terms keep justices independent of political pressure."
+    },
+    {
+      "id": 57,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who is the Chief Justice of the United States now?",
+      "type": "volatile",
+      "starred": false,
+      "answerType": "volatile",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "This answer can change. Use the current Chief Justice as listed at uscis.gov/citizenship/testupdates.",
+      "remoteConfigKey": "chiefJustice"
+    },
+    {
+      "id": 58,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Name one power that is only for the federal government.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Print paper money",
+        "Mint coins",
+        "Declare war",
+        "Create an army",
+        "Make treaties",
+        "Set foreign policy"
+      ],
+      "distractors": [
+        "Issue driver's licenses",
+        "Provide schooling",
+        "Approve local zoning",
+        "Run police departments"
+      ],
+      "explanation": "Only the federal government can print money, declare war, make treaties, and set foreign policy."
+    },
+    {
+      "id": 59,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Name one power that is only for the states.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Provide schooling and education",
+        "Provide protection (police)",
+        "Provide safety (fire departments)",
+        "Give a driver’s license",
+        "Approve zoning and land use"
+      ],
+      "distractors": [
+        "Print paper money",
+        "Declare war",
+        "Make treaties",
+        "Set foreign policy"
+      ],
+      "explanation": "States handle things like schools, police, fire departments, driver's licenses, and zoning."
+    },
+    {
+      "id": 60,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What is the purpose of the 10th Amendment?",
+      "type": "amendment",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(It states that the) powers not given to the federal government belong to the states or to the people."
+      ],
+      "distractors": [
+        "It guarantees freedom of speech.",
+        "It gives women the right to vote.",
+        "It abolishes slavery.",
+        "It sets presidential term limits."
+      ],
+      "explanation": "The 10th Amendment reserves powers not given to the federal government to the states or the people."
+    },
+    {
+      "id": 61,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "Who is the governor of your state now?",
+      "type": "varies",
+      "starred": true,
+      "answerType": "variesByState",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "Answer with your state's current governor. (D.C. residents answer that D.C. has no governor.) This changes with elections.",
+      "stateField": "governor"
+    },
+    {
+      "id": 62,
+      "category": "American Government",
+      "subcategory": "System of Government",
+      "question": "What is the capital of your state?",
+      "type": "varies",
+      "starred": false,
+      "answerType": "variesByState",
+      "correctAnswers": [],
+      "distractors": [],
+      "explanation": "Answer with your state's capital. Distractors can be other states' capitals. (D.C. is not a state; territory residents name the territory's capital.)",
+      "stateField": "capital",
+      "distractorStrategy": "otherStateCapitals"
+    },
+    {
+      "id": 63,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "There are four amendments to the U.S. Constitution about who can vote. Describe one of them.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Citizens eighteen (18) and older (can vote).",
+        "You don’t have to pay (a poll tax) to vote.",
+        "Any citizen can vote. (Women and men can vote.)",
+        "A male citizen of any race (can vote)."
+      ],
+      "distractors": [
+        "Only landowners can vote.",
+        "Only men can vote.",
+        "You must pass a test to vote.",
+        "Only people over 21 can vote."
+      ],
+      "explanation": "Voting amendments extended the vote regardless of race or sex, ended poll taxes, and set the voting age at 18."
+    },
+    {
+      "id": 64,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "Who can vote in federal elections, run for federal office, and serve on a jury in the United States?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Citizens",
+        "Citizens of the United States",
+        "U.S. citizens"
+      ],
+      "distractors": [
+        "Anyone living in the U.S.",
+        "Permanent residents (green card holders)",
+        "Anyone over 18",
+        "People who pay taxes"
+      ],
+      "explanation": "Only U.S. citizens can vote in federal elections, run for federal office, and serve on a jury."
+    },
+    {
+      "id": 65,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "What are three rights of everyone living in the United States?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Freedom of expression",
+        "Freedom of speech",
+        "Freedom of assembly",
+        "Freedom to petition the government",
+        "Freedom of religion",
+        "The right to bear arms"
+      ],
+      "distractors": [
+        "The right to vote in federal elections",
+        "The right to free healthcare",
+        "The right to a government job",
+        "The right to run for president"
+      ],
+      "explanation": "Everyone in the U.S. has freedoms like speech, religion, assembly, and petition; voting and running for office are limited to citizens."
+    },
+    {
+      "id": 66,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "What do we show loyalty to when we say the Pledge of Allegiance?",
+      "type": "concept",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "The United States",
+        "The flag"
+      ],
+      "distractors": [
+        "The President",
+        "The military",
+        "The Constitution",
+        "Your home state"
+      ],
+      "explanation": "The Pledge shows loyalty to the United States and its flag."
+    },
+    {
+      "id": 67,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "Name two promises that new citizens make in the Oath of Allegiance.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Give up loyalty to other countries",
+        "Defend the (U.S.) Constitution",
+        "Obey the laws of the United States",
+        "Serve in the military (if needed)",
+        "Serve (help, do important work for) the nation (if needed)",
+        "Be loyal to the United States"
+      ],
+      "distractors": [
+        "Pay higher taxes",
+        "Vote in every election",
+        "Learn a new language",
+        "Give up your native culture"
+      ],
+      "explanation": "New citizens promise to give up foreign loyalties, defend the Constitution, obey the laws, and serve if needed."
+    },
+    {
+      "id": 68,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "How can people become United States citizens?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Be born in the United States, under the conditions set by the 14th Amendment",
+        "Naturalize",
+        "Derive citizenship (under conditions set by Congress)"
+      ],
+      "distractors": [
+        "By paying a fee",
+        "By living here five years automatically",
+        "By marrying anyone",
+        "By joining the military only"
+      ],
+      "explanation": "Citizenship comes by birth (14th Amendment), naturalization, or derivation set by Congress."
+    },
+    {
+      "id": 69,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "What are two examples of civic participation in the United States?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Vote",
+        "Run for office",
+        "Join a political party",
+        "Help with a campaign",
+        "Join a civic group",
+        "Join a community group",
+        "Give an elected official your opinion (on an issue)",
+        "Contact elected officials",
+        "Support or oppose an issue or policy",
+        "Write to a newspaper"
+      ],
+      "distractors": [
+        "Pay a poll tax",
+        "Serve on the Supreme Court",
+        "Appoint a senator",
+        "Sign a treaty"
+      ],
+      "explanation": "Civic participation includes voting, campaigning, joining groups, and contacting officials."
+    },
+    {
+      "id": 70,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "What is one way Americans can serve their country?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Vote",
+        "Pay taxes",
+        "Obey the law",
+        "Serve in the military",
+        "Run for office",
+        "Work for local, state, or federal government"
+      ],
+      "distractors": [
+        "Ignore the law",
+        "Move to another country",
+        "Avoid paying taxes",
+        "Refuse jury duty"
+      ],
+      "explanation": "Americans can serve by voting, paying taxes, obeying the law, or serving in government or the military."
+    },
+    {
+      "id": 71,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "Why is it important to pay federal taxes?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Required by law",
+        "All people pay to fund the federal government",
+        "Required by the (U.S.) Constitution (16th Amendment)",
+        "Civic duty"
+      ],
+      "distractors": [
+        "To become a citizen",
+        "To be allowed to vote",
+        "So you can run for office",
+        "Paying taxes is optional"
+      ],
+      "explanation": "Paying federal taxes is required by law and funds the federal government."
+    },
+    {
+      "id": 72,
+      "category": "American Government",
+      "subcategory": "Rights and Responsibilities",
+      "question": "It is important for all men age 18 through 25 to register for the Selective Service. Name one reason why.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Required by law",
+        "Civic duty",
+        "Makes the draft fair, if needed"
+      ],
+      "distractors": [
+        "To receive a driver's license",
+        "To join a political party",
+        "To vote in elections",
+        "To get a passport"
+      ],
+      "explanation": "Registering for the Selective Service is required by law and keeps a possible draft fair."
+    },
+    {
+      "id": 73,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "The colonists came to America for many reasons. Name one.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Freedom",
+        "Political liberty",
+        "Religious freedom",
+        "Economic opportunity",
+        "Escape persecution"
+      ],
+      "distractors": [
+        "To find gold only for Britain",
+        "To spread communism",
+        "To escape World War I",
+        "To build the railroad"
+      ],
+      "explanation": "Colonists came for freedom, religious liberty, economic opportunity, and to escape persecution."
+    },
+    {
+      "id": 74,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "Who lived in America before the Europeans arrived?",
+      "type": "concept",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "American Indians",
+        "Native Americans"
+      ],
+      "distractors": [
+        "The Pilgrims",
+        "The Vikings only",
+        "The Spanish colonists",
+        "The English settlers"
+      ],
+      "explanation": "American Indians (Native Americans) lived here before Europeans arrived."
+    },
+    {
+      "id": 75,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "What group of people was taken and sold as slaves?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Africans",
+        "People from Africa"
+      ],
+      "distractors": [
+        "Native Americans",
+        "Irish immigrants",
+        "Europeans",
+        "Chinese laborers"
+      ],
+      "explanation": "Africans were taken and sold as slaves."
+    },
+    {
+      "id": 76,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "What war did the Americans fight to win independence from Britain?",
+      "type": "war",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "American Revolution",
+        "The (American) Revolutionary War",
+        "War for (American) Independence"
+      ],
+      "distractors": [
+        "The Civil War",
+        "The War of 1812",
+        "The French and Indian War",
+        "World War I"
+      ],
+      "explanation": "The American Revolution (Revolutionary War) won independence from Britain."
+    },
+    {
+      "id": 77,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "Name one reason why the Americans declared independence from Britain.",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "High taxes",
+        "Taxation without representation",
+        "British soldiers stayed in Americans’ houses (boarding, quartering)",
+        "They did not have self-government",
+        "Boston Massacre",
+        "Boston Tea Party (Tea Act)",
+        "Stamp Act",
+        "Sugar Act",
+        "Townshend Acts",
+        "Intolerable (Coercive) Acts"
+      ],
+      "distractors": [
+        "To end slavery",
+        "To join the British Empire",
+        "Because of the Great Depression",
+        "To stop the spread of communism"
+      ],
+      "explanation": "Reasons included high taxes, taxation without representation, quartering of soldiers, and no self-government."
+    },
+    {
+      "id": 78,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "Who wrote the Declaration of Independence?",
+      "type": "person",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Thomas) Jefferson"
+      ],
+      "distractors": [
+        "George Washington",
+        "James Madison",
+        "John Adams",
+        "Alexander Hamilton"
+      ],
+      "explanation": "Thomas Jefferson was the main writer of the Declaration of Independence."
+    },
+    {
+      "id": 79,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "When was the Declaration of Independence adopted?",
+      "type": "date",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "July 4, 1776"
+      ],
+      "distractors": [
+        "July 4, 1787",
+        "July 4, 1789",
+        "December 25, 1776",
+        "September 17, 1787"
+      ],
+      "explanation": "The Declaration of Independence was adopted on July 4, 1776."
+    },
+    {
+      "id": 80,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "The American Revolution had many important events. Name one.",
+      "type": "event",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Battle of) Bunker Hill",
+        "Declaration of Independence",
+        "Washington Crossing the Delaware (Battle of Trenton)",
+        "(Battle of) Saratoga",
+        "Valley Forge (Encampment)",
+        "(Battle of) Yorktown (British surrender at Yorktown)"
+      ],
+      "distractors": [
+        "The Battle of Gettysburg",
+        "Pearl Harbor",
+        "The Alamo",
+        "D-Day"
+      ],
+      "explanation": "Key Revolution events include Bunker Hill, Saratoga, Valley Forge, and Yorktown."
+    },
+    {
+      "id": 81,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "There were 13 original states. Name five.",
+      "type": "list",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "New Hampshire",
+        "Massachusetts",
+        "Rhode Island",
+        "Connecticut",
+        "New York",
+        "New Jersey",
+        "Pennsylvania",
+        "Delaware",
+        "Maryland",
+        "Virginia",
+        "North Carolina",
+        "South Carolina",
+        "Georgia"
+      ],
+      "distractors": [
+        "Vermont",
+        "Kentucky",
+        "Ohio",
+        "Maine",
+        "Tennessee",
+        "Florida",
+        "California",
+        "Texas"
+      ],
+      "explanation": "The 13 original states ran along the Atlantic coast; states like Vermont, Ohio, and California joined later."
+    },
+    {
+      "id": 82,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "What founding document was written in 1787?",
+      "type": "document",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(U.S.) Constitution"
+      ],
+      "distractors": [
+        "Declaration of Independence",
+        "Bill of Rights",
+        "Articles of Confederation",
+        "Emancipation Proclamation"
+      ],
+      "explanation": "The U.S. Constitution was written in 1787."
+    },
+    {
+      "id": 83,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(James) Madison",
+        "(Alexander) Hamilton",
+        "(John) Jay",
+        "Publius"
+      ],
+      "distractors": [
+        "Thomas Jefferson",
+        "George Washington",
+        "Benjamin Franklin",
+        "John Adams"
+      ],
+      "explanation": "The Federalist Papers were written by Madison, Hamilton, and Jay (under the name Publius)."
+    },
+    {
+      "id": 84,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "Why were the Federalist Papers important?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "They helped people understand the (U.S.) Constitution.",
+        "They supported passing the (U.S.) Constitution."
+      ],
+      "distractors": [
+        "They declared independence from Britain.",
+        "They freed the slaves.",
+        "They started the Revolutionary War.",
+        "They created the Bill of Rights."
+      ],
+      "explanation": "The Federalist Papers explained the Constitution and urged its ratification."
+    },
+    {
+      "id": 85,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "Benjamin Franklin is famous for many things. Name one.",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Founded the first free public libraries",
+        "First Postmaster General of the United States",
+        "Helped write the Declaration of Independence",
+        "Inventor",
+        "U.S. diplomat"
+      ],
+      "distractors": [
+        "First President of the United States",
+        "Wrote the Constitution alone",
+        "Led the Continental Army",
+        "Third President of the United States"
+      ],
+      "explanation": "Franklin was a diplomat and inventor, the first Postmaster General, and helped write the Declaration."
+    },
+    {
+      "id": 86,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "George Washington is famous for many things. Name one.",
+      "type": "person",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "“Father of Our Country”",
+        "First president of the United States",
+        "General of the Continental Army",
+        "President of the Constitutional Convention"
+      ],
+      "distractors": [
+        "Wrote the Declaration of Independence",
+        "Freed the slaves",
+        "First Secretary of the Treasury",
+        "Discovered electricity"
+      ],
+      "explanation": "Washington led the Continental Army and became the first President — the “Father of Our Country.”"
+    },
+    {
+      "id": 87,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "Thomas Jefferson is famous for many things. Name one.",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Writer of the Declaration of Independence",
+        "Third president of the United States",
+        "Doubled the size of the United States (Louisiana Purchase)",
+        "First Secretary of State",
+        "Founded the University of Virginia",
+        "Writer of the Virginia Statute on Religious Freedom"
+      ],
+      "distractors": [
+        "First president",
+        "“Father of the Constitution”",
+        "Led troops in the Civil War",
+        "Invented the light bulb"
+      ],
+      "explanation": "Jefferson wrote the Declaration, was the third President, and made the Louisiana Purchase."
+    },
+    {
+      "id": 88,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "James Madison is famous for many things. Name one.",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "“Father of the Constitution”",
+        "Fourth president of the United States",
+        "President during the War of 1812",
+        "One of the writers of the Federalist Papers"
+      ],
+      "distractors": [
+        "Wrote the Declaration of Independence",
+        "First president",
+        "First Secretary of the Treasury",
+        "Freed the slaves"
+      ],
+      "explanation": "Madison is the “Father of the Constitution,” the fourth President, and a Federalist Papers author."
+    },
+    {
+      "id": 89,
+      "category": "American History",
+      "subcategory": "Colonial Period and Independence",
+      "question": "Alexander Hamilton is famous for many things. Name one.",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "First Secretary of the Treasury",
+        "One of the writers of the Federalist Papers",
+        "Helped establish the First Bank of the United States",
+        "Aide to General George Washington",
+        "Member of the Continental Congress"
+      ],
+      "distractors": [
+        "President of the United States",
+        "Wrote the Declaration of Independence",
+        "Chief Justice of the Supreme Court",
+        "Led the Union Army"
+      ],
+      "explanation": "Hamilton was the first Secretary of the Treasury and a Federalist Papers author — he was never President."
+    },
+    {
+      "id": 90,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "What territory did the United States buy from France in 1803?",
+      "type": "event",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Louisiana Territory",
+        "Louisiana"
+      ],
+      "distractors": [
+        "Alaska",
+        "Florida",
+        "Texas",
+        "California"
+      ],
+      "explanation": "The U.S. bought the Louisiana Territory from France in 1803 (Alaska was later, from Russia)."
+    },
+    {
+      "id": 91,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "Name one war fought by the United States in the 1800s.",
+      "type": "war",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "War of 1812",
+        "Mexican-American War",
+        "Civil War",
+        "Spanish-American War"
+      ],
+      "distractors": [
+        "World War I",
+        "The Revolutionary War",
+        "The Korean War",
+        "The Vietnam War"
+      ],
+      "explanation": "1800s wars include the War of 1812, the Mexican-American War, the Civil War, and the Spanish-American War."
+    },
+    {
+      "id": 92,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "Name the U.S. war between the North and the South.",
+      "type": "war",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The Civil War"
+      ],
+      "distractors": [
+        "The Revolutionary War",
+        "The War of 1812",
+        "World War I",
+        "The Cold War"
+      ],
+      "explanation": "The Civil War was fought between the North and the South."
+    },
+    {
+      "id": 93,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "The Civil War had many important events. Name one.",
+      "type": "event",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Battle of) Fort Sumter",
+        "Emancipation Proclamation",
+        "(Battle of) Vicksburg",
+        "(Battle of) Gettysburg",
+        "Sherman’s March",
+        "(Surrender at) Appomattox",
+        "(Battle of) Antietam/Sharpsburg",
+        "Lincoln was assassinated."
+      ],
+      "distractors": [
+        "Pearl Harbor",
+        "The Boston Tea Party",
+        "D-Day",
+        "The Battle of Yorktown"
+      ],
+      "explanation": "Civil War events include Fort Sumter, Gettysburg, Antietam, and the surrender at Appomattox."
+    },
+    {
+      "id": 94,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "Abraham Lincoln is famous for many things. Name one.",
+      "type": "person",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Freed the slaves (Emancipation Proclamation)",
+        "Saved (or preserved) the Union",
+        "Led the United States during the Civil War",
+        "16th president of the United States",
+        "Delivered the Gettysburg Address"
+      ],
+      "distractors": [
+        "First president",
+        "Wrote the Declaration of Independence",
+        "Led troops in the Revolution",
+        "Doubled the size of the country"
+      ],
+      "explanation": "Lincoln, the 16th President, led the Union in the Civil War and issued the Emancipation Proclamation."
+    },
+    {
+      "id": 95,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "What did the Emancipation Proclamation do?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Freed the slaves",
+        "Freed slaves in the Confederacy",
+        "Freed slaves in the Confederate states",
+        "Freed slaves in most Southern states"
+      ],
+      "distractors": [
+        "Ended the Civil War",
+        "Gave women the right to vote",
+        "Made all people citizens",
+        "Created the Bill of Rights"
+      ],
+      "explanation": "The Emancipation Proclamation freed the slaves in the Confederate states."
+    },
+    {
+      "id": 96,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "What U.S. war ended slavery?",
+      "type": "war",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The Civil War"
+      ],
+      "distractors": [
+        "The Revolutionary War",
+        "World War I",
+        "The War of 1812",
+        "The Mexican-American War"
+      ],
+      "explanation": "The Civil War ended slavery in the United States."
+    },
+    {
+      "id": 97,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "What amendment says all persons born or naturalized in the United States, and subject to the jurisdiction thereof, are U.S. citizens?",
+      "type": "amendment",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "14th Amendment"
+      ],
+      "distractors": [
+        "13th Amendment",
+        "15th Amendment",
+        "1st Amendment",
+        "19th Amendment"
+      ],
+      "explanation": "The 14th Amendment defines citizenship for those born or naturalized in the U.S."
+    },
+    {
+      "id": 98,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "When did all men get the right to vote?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "After the Civil War",
+        "During Reconstruction",
+        "(With the) 15th Amendment",
+        "1870"
+      ],
+      "distractors": [
+        "1776",
+        "With the 19th Amendment",
+        "After World War II",
+        "1920"
+      ],
+      "explanation": "The 15th Amendment (1870) gave all men the right to vote regardless of race."
+    },
+    {
+      "id": 99,
+      "category": "American History",
+      "subcategory": "1800s",
+      "question": "Name one leader of the women’s rights movement in the 1800s.",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Susan B. Anthony",
+        "Elizabeth Cady Stanton",
+        "Sojourner Truth",
+        "Harriet Tubman",
+        "Lucretia Mott",
+        "Lucy Stone"
+      ],
+      "distractors": [
+        "Rosa Parks",
+        "Eleanor Roosevelt",
+        "Betsy Ross",
+        "Clara Barton"
+      ],
+      "explanation": "1800s women's rights leaders include Susan B. Anthony and Elizabeth Cady Stanton."
+    },
+    {
+      "id": 100,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Name one war fought by the United States in the 1900s.",
+      "type": "war",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "World War I",
+        "World War II",
+        "Korean War",
+        "Vietnam War",
+        "(Persian) Gulf War"
+      ],
+      "distractors": [
+        "The Civil War",
+        "The Revolutionary War",
+        "The War of 1812",
+        "The Mexican-American War"
+      ],
+      "explanation": "1900s wars include World War I, World War II, Korea, Vietnam, and the Persian Gulf War."
+    },
+    {
+      "id": 101,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Why did the United States enter World War I?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Because Germany attacked U.S. (civilian) ships",
+        "To support the Allied Powers (England, France, Italy, and Russia)",
+        "To oppose the Central Powers (Germany, Austria-Hungary, the Ottoman Empire, and Bulgaria)"
+      ],
+      "distractors": [
+        "Because of Pearl Harbor",
+        "To stop the spread of communism",
+        "To force Iraq from Kuwait",
+        "Because of the September 11 attacks"
+      ],
+      "explanation": "The U.S. entered WWI after Germany attacked U.S. ships, siding with the Allies."
+    },
+    {
+      "id": 102,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "When did all women get the right to vote?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "1920",
+        "After World War I",
+        "(With the) 19th Amendment"
+      ],
+      "distractors": [
+        "1870",
+        "With the 15th Amendment",
+        "After the Civil War",
+        "1776"
+      ],
+      "explanation": "The 19th Amendment (1920) gave all women the right to vote."
+    },
+    {
+      "id": 103,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "What was the Great Depression?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Longest economic recession in modern history"
+      ],
+      "distractors": [
+        "A war in Europe",
+        "A period of rapid economic growth",
+        "The Cold War",
+        "A stock market boom"
+      ],
+      "explanation": "The Great Depression was the longest economic recession in modern history."
+    },
+    {
+      "id": 104,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "When did the Great Depression start?",
+      "type": "event",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The Great Crash (1929)",
+        "Stock market crash of 1929"
+      ],
+      "distractors": [
+        "1776",
+        "1941",
+        "1918",
+        "1965"
+      ],
+      "explanation": "The Great Depression began with the stock market crash of 1929."
+    },
+    {
+      "id": 105,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Who was president during the Great Depression and World War II?",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Franklin) Roosevelt"
+      ],
+      "distractors": [
+        "Woodrow Wilson",
+        "Harry Truman",
+        "Dwight Eisenhower",
+        "Herbert Hoover"
+      ],
+      "explanation": "Franklin Roosevelt was President during the Great Depression and most of World War II."
+    },
+    {
+      "id": 106,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Why did the United States enter World War II?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Bombing of) Pearl Harbor",
+        "Japanese attacked Pearl Harbor",
+        "To support the Allied Powers (England, France, and Russia)",
+        "To oppose the Axis Powers (Germany, Italy, and Japan)"
+      ],
+      "distractors": [
+        "Germany attacked U.S. ships in World War I",
+        "To stop communism in Vietnam",
+        "Because of the 9/11 attacks",
+        "To force Iraq from Kuwait"
+      ],
+      "explanation": "The U.S. entered WWII after Japan bombed Pearl Harbor."
+    },
+    {
+      "id": 107,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Dwight Eisenhower is famous for many things. Name one.",
+      "type": "person",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "General during World War II",
+        "President at the end of (during) the Korean War",
+        "34th president of the United States",
+        "Signed the Federal-Aid Highway Act of 1956 (Created the Interstate System)"
+      ],
+      "distractors": [
+        "Led troops in the Civil War",
+        "First president",
+        "Wrote the Declaration of Independence",
+        "President during the Great Depression"
+      ],
+      "explanation": "Eisenhower was a WWII general and the 34th President who created the Interstate Highway System."
+    },
+    {
+      "id": 108,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Who was the United States’ main rival during the Cold War?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Soviet Union",
+        "USSR",
+        "Russia"
+      ],
+      "distractors": [
+        "Germany",
+        "China",
+        "Japan",
+        "Great Britain"
+      ],
+      "explanation": "The Soviet Union (USSR) was the main U.S. rival during the Cold War."
+    },
+    {
+      "id": 109,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "During the Cold War, what was one main concern of the United States?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Communism",
+        "Nuclear war"
+      ],
+      "distractors": [
+        "Terrorism",
+        "The Great Depression",
+        "Slavery",
+        "British taxation"
+      ],
+      "explanation": "During the Cold War the U.S. was concerned about communism and nuclear war."
+    },
+    {
+      "id": 110,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Why did the United States enter the Korean War?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "To stop the spread of communism"
+      ],
+      "distractors": [
+        "Because of Pearl Harbor",
+        "To force Iraq from Kuwait",
+        "Because of the 9/11 attacks",
+        "To win independence from Britain"
+      ],
+      "explanation": "The U.S. entered the Korean War to stop the spread of communism."
+    },
+    {
+      "id": 111,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Why did the United States enter the Vietnam War?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "To stop the spread of communism"
+      ],
+      "distractors": [
+        "Because of Pearl Harbor",
+        "To end slavery",
+        "Because of the 9/11 attacks",
+        "To force Iraq out of Kuwait"
+      ],
+      "explanation": "The U.S. entered the Vietnam War to stop the spread of communism."
+    },
+    {
+      "id": 112,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "What did the civil rights movement do?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Fought to end racial discrimination"
+      ],
+      "distractors": [
+        "Gave women the right to vote",
+        "Ended the Vietnam War",
+        "Fought for independence from Britain",
+        "Ended the Great Depression"
+      ],
+      "explanation": "The civil rights movement fought to end racial discrimination."
+    },
+    {
+      "id": 113,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Martin Luther King, Jr. is famous for many things. Name one.",
+      "type": "person",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Fought for civil rights",
+        "Worked for equality for all Americans",
+        "Worked to ensure that people would “not be judged by the color of their skin, but by the content of their character”"
+      ],
+      "distractors": [
+        "Was the first African American president",
+        "Led the American Revolution",
+        "Signed the Emancipation Proclamation",
+        "Led the women's suffrage movement"
+      ],
+      "explanation": "Dr. King was a leader of the civil rights movement who worked for equality."
+    },
+    {
+      "id": 114,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Why did the United States enter the Persian Gulf War?",
+      "type": "concept",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "To force the Iraqi military from Kuwait"
+      ],
+      "distractors": [
+        "To stop the spread of communism",
+        "Because of Pearl Harbor",
+        "Because of the 9/11 attacks",
+        "To win independence from Britain"
+      ],
+      "explanation": "The U.S. entered the Persian Gulf War to force the Iraqi military out of Kuwait."
+    },
+    {
+      "id": 115,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "What major event happened on September 11, 2001 in the United States?",
+      "type": "event",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "Terrorists attacked the United States",
+        "Terrorists took over two planes and crashed them into the World Trade Center in New York City",
+        "Terrorists took over a plane and crashed into the Pentagon in Arlington, Virginia",
+        "Terrorists took over a plane originally aimed at Washington, D.C., and crashed in a field in Pennsylvania"
+      ],
+      "distractors": [
+        "The stock market crashed",
+        "The United States entered World War II",
+        "The Cold War ended",
+        "Pearl Harbor was bombed"
+      ],
+      "explanation": "On September 11, 2001, terrorists attacked the U.S., including the World Trade Center and the Pentagon."
+    },
+    {
+      "id": 116,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Name one U.S. military conflict after the September 11, 2001 attacks.",
+      "type": "war",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Global) War on Terror",
+        "War in Afghanistan",
+        "War in Iraq"
+      ],
+      "distractors": [
+        "The Vietnam War",
+        "The Korean War",
+        "World War II",
+        "The Cold War"
+      ],
+      "explanation": "After 9/11 the U.S. fought the War on Terror, including wars in Afghanistan and Iraq."
+    },
+    {
+      "id": 117,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Name one American Indian tribe in the United States.",
+      "type": "list",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Apache",
+        "Blackfeet",
+        "Cayuga",
+        "Cherokee",
+        "Cheyenne",
+        "Chippewa",
+        "Choctaw",
+        "Creek",
+        "Crow",
+        "Hopi",
+        "Huron",
+        "Inupiat",
+        "Lakota",
+        "Mohawk",
+        "Mohegan",
+        "Navajo",
+        "Oneida",
+        "Onondaga",
+        "Pueblo",
+        "Seminole",
+        "Seneca",
+        "Shawnee",
+        "Sioux",
+        "Teton",
+        "Tuscarora"
+      ],
+      "distractors": [
+        "Aztec",
+        "Maya",
+        "Inca",
+        "Zulu"
+      ],
+      "explanation": "U.S. tribes include the Cherokee, Navajo, and Sioux; the Aztec, Maya, and Inca are not U.S. tribes."
+    },
+    {
+      "id": 118,
+      "category": "American History",
+      "subcategory": "Recent American History and Other Important Historical Information",
+      "question": "Name one example of an American innovation.",
+      "type": "list",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Light bulb",
+        "Automobile (cars, internal combustion engine)",
+        "Skyscrapers",
+        "Airplane",
+        "Assembly line",
+        "Landing on the moon",
+        "Integrated circuit (IC)"
+      ],
+      "distractors": [
+        "Gunpowder",
+        "The printing press",
+        "The steam engine",
+        "Paper"
+      ],
+      "explanation": "American innovations include the light bulb, airplane, assembly line, and the moon landing."
+    },
+    {
+      "id": 119,
+      "category": "Symbols and Holidays",
+      "subcategory": "Symbols",
+      "question": "What is the capital of the United States?",
+      "type": "geography",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Washington, D.C."
+      ],
+      "distractors": [
+        "New York City",
+        "Philadelphia",
+        "Boston",
+        "Los Angeles"
+      ],
+      "explanation": "Washington, D.C. is the capital of the United States."
+    },
+    {
+      "id": 120,
+      "category": "Symbols and Holidays",
+      "subcategory": "Symbols",
+      "question": "Where is the Statue of Liberty?",
+      "type": "geography",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "New York (Harbor)",
+        "Liberty Island",
+        "New Jersey",
+        "near New York City",
+        "on the Hudson (River)"
+      ],
+      "distractors": [
+        "Washington, D.C.",
+        "Boston Harbor",
+        "San Francisco Bay",
+        "Chesapeake Bay"
+      ],
+      "explanation": "The Statue of Liberty stands in New York Harbor on Liberty Island."
+    },
+    {
+      "id": 121,
+      "category": "Symbols and Holidays",
+      "subcategory": "Symbols",
+      "question": "Why does the flag have 13 stripes?",
+      "type": "symbol",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Because there were) 13 original colonies",
+        "(Because the stripes) represent the original colonies"
+      ],
+      "distractors": [
+        "For the 13 founding fathers",
+        "For 13 presidents",
+        "For the 13 amendments",
+        "For 13 branches of government"
+      ],
+      "explanation": "The 13 stripes represent the 13 original colonies."
+    },
+    {
+      "id": 122,
+      "category": "Symbols and Holidays",
+      "subcategory": "Symbols",
+      "question": "Why does the flag have 50 stars?",
+      "type": "symbol",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "(Because there is) one star for each state",
+        "(Because) each star represents a state",
+        "(Because there are) 50 states"
+      ],
+      "distractors": [
+        "One for each original colony",
+        "For 50 senators",
+        "For 50 years of independence",
+        "For 50 founding fathers"
+      ],
+      "explanation": "The 50 stars represent the 50 states."
+    },
+    {
+      "id": 123,
+      "category": "Symbols and Holidays",
+      "subcategory": "Symbols",
+      "question": "What is the name of the national anthem?",
+      "type": "symbol",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "The Star-Spangled Banner"
+      ],
+      "distractors": [
+        "America the Beautiful",
+        "God Bless America",
+        "My Country, ’Tis of Thee",
+        "This Land Is Your Land"
+      ],
+      "explanation": "The national anthem is “The Star-Spangled Banner.”"
+    },
+    {
+      "id": 124,
+      "category": "Symbols and Holidays",
+      "subcategory": "Symbols",
+      "question": "The Nation’s first motto was “E Pluribus Unum.” What does that mean?",
+      "type": "symbol",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "Out of many, one",
+        "We all become one"
+      ],
+      "distractors": [
+        "In God we trust",
+        "Land of the free",
+        "Liberty and justice for all",
+        "Life, liberty, and happiness"
+      ],
+      "explanation": "“E Pluribus Unum” means “out of many, one.”"
+    },
+    {
+      "id": 125,
+      "category": "Symbols and Holidays",
+      "subcategory": "Holidays",
+      "question": "What is Independence Day?",
+      "type": "holiday",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "A holiday to celebrate U.S. independence (from Britain)",
+        "The country’s birthday"
+      ],
+      "distractors": [
+        "A holiday to honor soldiers who died",
+        "A holiday to honor all veterans",
+        "The day the Constitution was signed",
+        "A holiday to celebrate workers"
+      ],
+      "explanation": "Independence Day (July 4) celebrates U.S. independence from Britain."
+    },
+    {
+      "id": 126,
+      "category": "Symbols and Holidays",
+      "subcategory": "Holidays",
+      "question": "Name three national U.S. holidays.",
+      "type": "holiday",
+      "starred": true,
+      "answerType": "static",
+      "correctAnswers": [
+        "New Year’s Day",
+        "Martin Luther King, Jr. Day",
+        "Presidents Day (Washington’s Birthday)",
+        "Memorial Day",
+        "Juneteenth",
+        "Independence Day",
+        "Labor Day",
+        "Columbus Day",
+        "Veterans Day",
+        "Thanksgiving Day",
+        "Christmas Day"
+      ],
+      "distractors": [
+        "Valentine’s Day",
+        "Halloween",
+        "Easter",
+        "Mother’s Day"
+      ],
+      "explanation": "National holidays include New Year's Day, Memorial Day, Independence Day, Thanksgiving, and Christmas."
+    },
+    {
+      "id": 127,
+      "category": "Symbols and Holidays",
+      "subcategory": "Holidays",
+      "question": "What is Memorial Day?",
+      "type": "holiday",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "A holiday to honor soldiers who died in military service"
+      ],
+      "distractors": [
+        "A holiday to honor all living veterans",
+        "A holiday to celebrate independence",
+        "A holiday to honor workers",
+        "A holiday to honor presidents"
+      ],
+      "explanation": "Memorial Day honors soldiers who died in military service."
+    },
+    {
+      "id": 128,
+      "category": "Symbols and Holidays",
+      "subcategory": "Holidays",
+      "question": "What is Veterans Day?",
+      "type": "holiday",
+      "starred": false,
+      "answerType": "static",
+      "correctAnswers": [
+        "A holiday to honor people in the (U.S.) military",
+        "A holiday to honor people who have served (in the U.S. military)"
+      ],
+      "distractors": [
+        "A holiday to honor soldiers who died in war",
+        "A holiday to celebrate independence",
+        "A holiday to honor workers",
+        "A holiday to honor the flag"
+      ],
+      "explanation": "Veterans Day honors all people who have served in the U.S. military."
+    }
+  ]
+}
