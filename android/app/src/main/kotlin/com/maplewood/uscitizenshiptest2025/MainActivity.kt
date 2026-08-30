@@ -1,4 +1,4 @@
-package com.example.civics_test_app
+package com.maplewood.uscitizenshiptest2025
 
 import io.flutter.embedding.android.FlutterActivity
 
