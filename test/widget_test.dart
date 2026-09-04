@@ -3,11 +3,14 @@ import 'package:civics_test_app/models/mcq_item.dart';
 import 'package:civics_test_app/models/practice_test.dart';
 import 'package:civics_test_app/models/remote_config.dart';
 import 'package:civics_test_app/screens/favorites_screen.dart';
+import 'package:civics_test_app/screens/fix_misses_screen.dart';
 import 'package:civics_test_app/screens/flashcards_screen.dart';
 import 'package:civics_test_app/screens/home_screen.dart';
 import 'package:civics_test_app/screens/practice_tests_screen.dart';
 import 'package:civics_test_app/screens/quiz_screen.dart';
+import 'package:civics_test_app/screens/search_screen.dart';
 import 'package:civics_test_app/screens/settings_screen.dart';
+import 'package:civics_test_app/screens/topic_quiz_screen.dart';
 import 'package:civics_test_app/screens/statistics_screen.dart';
 import 'package:civics_test_app/screens/study_categories_screen.dart';
 import 'package:civics_test_app/screens/study_questions_screen.dart';
@@ -40,6 +43,11 @@ Map<String, Widget Function()> screens() => <String, Widget Function()>{
       'Favorites': () => const FavoritesScreen(),
       'Statistics': () => const StatisticsScreen(),
       'Settings': () => const SettingsScreen(),
+      'Search': () => const SearchScreen(),
+      // Both of these exist only to install a provider override, so rendering
+      // them is what proves the override still reaches the quiz controller.
+      'Fix your misses': () => const FixMissesScreen(),
+      'Topic quiz': () => const TopicQuizScreen(category: 'American Government'),
     };
 
 void main() {
@@ -313,6 +321,70 @@ void main() {
       await tester.pumpWidget(harnessWith(deps, const FavoritesScreen()));
       await tester.pumpAndSettle();
       expect(find.text('No favorites yet'), findsOneWidget);
+    });
+  });
+
+  group('search', () {
+    testWidgets('typing narrows to matching questions', (WidgetTester tester) async {
+      useSmallPhone(tester);
+      final TestDeps deps = await resolveDeps();
+      await tester.pumpWidget(harnessWith(deps, const SearchScreen()));
+      await tester.pumpAndSettle();
+
+      // Nothing typed yet: a prompt, not an empty list of every question.
+      expect(find.text('Type a word or two'), findsOneWidget);
+
+      await tester.enterText(find.byType(TextField), 'Speaker');
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('found'), findsOneWidget);
+      expect(find.textContaining('Speaker of the House'), findsWidgets);
+    });
+
+    testWidgets('says so plainly when nothing matches', (WidgetTester tester) async {
+      useSmallPhone(tester);
+      final TestDeps deps = await resolveDeps();
+      await tester.pumpWidget(harnessWith(deps, const SearchScreen()));
+      await tester.pumpAndSettle();
+
+      await tester.enterText(find.byType(TextField), 'zzzznotaword');
+      await tester.pumpAndSettle();
+
+      expect(find.textContaining('Nothing matches'), findsOneWidget);
+    });
+  });
+
+  group('flashcards', () {
+    testWidgets('follows the app-wide scope instead of its own filter',
+        (WidgetTester tester) async {
+      useSmallPhone(tester);
+      final TestDeps deps = await resolveDeps(
+        prefsValues: <String, Object>{'settings.scope': 'starred'},
+      );
+      await tester.pumpWidget(harnessWith(deps, const FlashcardsScreen()));
+      await tester.pumpAndSettle();
+
+      // The old screen-local "Starred only" chip is gone; the deck is already
+      // narrowed to the 20 starred questions by the global scope.
+      expect(find.text('Starred only'), findsNothing);
+      expect(find.text('1 / 20'), findsOneWidget);
+    });
+
+    testWidgets('shuffling reorders the deck and returns to the start',
+        (WidgetTester tester) async {
+      useSmallPhone(tester);
+      final TestDeps deps = await resolveDeps();
+      await tester.pumpWidget(harnessWith(deps, const FlashcardsScreen()));
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      expect(find.text('2 / 128'), findsOneWidget);
+
+      await tester.tap(find.byIcon(Icons.shuffle));
+      await tester.pumpAndSettle();
+      expect(find.text('1 / 128'), findsOneWidget);
+      expect(find.byIcon(Icons.sort), findsOneWidget);
     });
   });
 

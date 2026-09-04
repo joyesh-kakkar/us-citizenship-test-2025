@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/question.dart';
 import '../models/question_bank.dart';
+import '../models/scope.dart';
 import '../state/providers.dart';
 import '../theme/app_theme.dart';
 import '../widgets/answer_widgets.dart';
@@ -21,21 +22,52 @@ class FlashcardsScreen extends ConsumerStatefulWidget {
 
 class _FlashcardsScreenState extends ConsumerState<FlashcardsScreen> {
   String? _category; // null = all categories
-  bool _starredOnly = false;
   int _index = 0;
   bool _flipped = false;
 
-  List<Question> _deck(QuestionBank bank) {
+  /// Card ids in shuffled order, or null while the deck is in official order.
+  List<int>? _shuffledIds;
+
+  List<Question> _deck(QuestionBank bank, StudyScope scope) {
     Iterable<Question> qs = bank.questions;
-    if (_starredOnly) qs = qs.where((Question q) => q.starred);
+    if (scope == StudyScope.starred) qs = qs.where((Question q) => q.starred);
     if (_category != null) qs = qs.where((Question q) => q.category == _category);
-    return qs.toList(growable: false);
+    final List<Question> deck = qs.toList();
+
+    final List<int>? order = _shuffledIds;
+    if (order != null) {
+      // Keep the shuffled order across rebuilds, and tolerate the deck having
+      // changed underneath it (a new filter, a different scope).
+      final Map<int, int> rank = <int, int>{
+        for (int i = 0; i < order.length; i++) order[i]: i,
+      };
+      deck.sort((Question a, Question b) =>
+          (rank[a.id] ?? 1 << 30).compareTo(rank[b.id] ?? 1 << 30));
+    }
+    return List<Question>.unmodifiable(deck);
   }
 
   void _go(int delta, int length) {
+    if (length == 0) return;
     setState(() {
       _index = (_index + delta) % length;
-      if (_index < 0) _index += length;
+      _flipped = false;
+    });
+  }
+
+  void _shuffle(List<Question> deck) {
+    setState(() {
+      _shuffledIds = (deck.map((Question q) => q.id).toList()..shuffle())
+          .toList(growable: false);
+      _index = 0;
+      _flipped = false;
+    });
+  }
+
+  void _resetOrder() {
+    setState(() {
+      _shuffledIds = null;
+      _index = 0;
       _flipped = false;
     });
   }
@@ -43,13 +75,26 @@ class _FlashcardsScreenState extends ConsumerState<FlashcardsScreen> {
   @override
   Widget build(BuildContext context) {
     final QuestionBank bank = ref.watch(questionBankProvider);
-    final List<Question> deck = _deck(bank);
+    final StudyScope scope = ref.watch(scopeProvider);
+    final List<Question> deck = _deck(bank, scope);
     final TextTheme text = Theme.of(context).textTheme;
 
-    if (_index >= deck.length) _index = 0;
+    // Clamp for display without writing to state during build: a filter change
+    // can shrink the deck under the current index.
+    final int index = deck.isEmpty ? 0 : _index % deck.length;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Flashcards')),
+      appBar: AppBar(
+        title: const Text('Flashcards'),
+        actions: <Widget>[
+          if (deck.isNotEmpty)
+            IconButton(
+              icon: Icon(_shuffledIds == null ? Icons.shuffle : Icons.sort),
+              tooltip: _shuffledIds == null ? 'Shuffle the deck' : 'Back to official order',
+              onPressed: () => _shuffledIds == null ? _shuffle(deck) : _resetOrder(),
+            ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -58,14 +103,8 @@ class _FlashcardsScreenState extends ConsumerState<FlashcardsScreen> {
               child: _Filters(
                 category: _category,
                 categories: bank.categories,
-                starredOnly: _starredOnly,
                 onCategory: (String? c) => setState(() {
                   _category = c;
-                  _index = 0;
-                  _flipped = false;
-                }),
-                onStarred: (bool v) => setState(() {
-                  _starredOnly = v;
                   _index = 0;
                   _flipped = false;
                 }),
@@ -77,15 +116,30 @@ class _FlashcardsScreenState extends ConsumerState<FlashcardsScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(24),
                         child: Text(
-                          'No cards match this filter.',
+                          scope == StudyScope.starred
+                              ? 'No starred cards in this topic. Switch to all 128 '
+                                  'questions in Settings, or pick another topic.'
+                              : 'No cards match this filter.',
                           style: text.bodyLarge,
                           textAlign: TextAlign.center,
                         ),
                       ),
                     )
-                  : _Card(question: deck[_index], flipped: _flipped, onFlip: () {
-                      setState(() => _flipped = !_flipped);
-                    }),
+                  // Swipe left/right to move through the deck — the gesture
+                  // everyone tries on a card stack — with the buttons below
+                  // kept for anyone who would rather tap.
+                  : GestureDetector(
+                      onHorizontalDragEnd: (DragEndDetails details) {
+                        final double v = details.primaryVelocity ?? 0;
+                        if (v < -80) _go(1, deck.length);
+                        if (v > 80) _go(-1, deck.length);
+                      },
+                      child: _Card(
+                        question: deck[index],
+                        flipped: _flipped,
+                        onFlip: () => setState(() => _flipped = !_flipped),
+                      ),
+                    ),
             ),
             if (deck.isNotEmpty)
               Padding(
@@ -95,7 +149,7 @@ class _FlashcardsScreenState extends ConsumerState<FlashcardsScreen> {
                 // text size is large.
                 child: Column(
                   children: <Widget>[
-                    Text('${_index + 1} / ${deck.length}', style: text.titleMedium),
+                    Text('${index + 1} / ${deck.length}', style: text.titleMedium),
                     const SizedBox(height: 8),
                     Row(
                       children: <Widget>[
@@ -130,16 +184,12 @@ class _Filters extends StatelessWidget {
   const _Filters({
     required this.category,
     required this.categories,
-    required this.starredOnly,
     required this.onCategory,
-    required this.onStarred,
   });
 
   final String? category;
   final List<String> categories;
-  final bool starredOnly;
   final ValueChanged<String?> onCategory;
-  final ValueChanged<bool> onStarred;
 
   @override
   Widget build(BuildContext context) {
@@ -147,12 +197,6 @@ class _Filters extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          FilterChip(
-            label: const Text('Starred only'),
-            selected: starredOnly,
-            onSelected: onStarred,
-          ),
-          const SizedBox(width: 8),
           ChoiceChip(
             label: const Text('All topics'),
             selected: category == null,

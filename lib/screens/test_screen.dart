@@ -52,28 +52,36 @@ class _TestScreenState extends ConsumerState<TestScreen> {
     if (_scrollController.hasClients) _scrollController.jumpTo(0);
   }
 
-  /// Leaving mid-test discards the run, so confirm first.
+  /// Leaving mid-test keeps the run so it can be resumed, but discarding it is
+  /// offered too — a run you no longer want should not sit there as a nag.
   Future<bool> _confirmQuit() async {
-    final bool? leave = await showDialog<bool>(
+    final String? choice = await showDialog<String>(
       context: context,
       builder: (BuildContext context) => AlertDialog(
         title: const Text('Leave the practice test?'),
         content: const Text(
-          'Your answers so far will not be saved. You can start a new test any time.',
+          'Your answers are saved, so you can pick this test up where you left off.',
         ),
         actions: <Widget>[
           TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
+            onPressed: () => Navigator.of(context).pop('stay'),
             child: const Text('Keep going'),
           ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop('discard'),
+            child: const Text('Discard'),
+          ),
           FilledButton(
-            onPressed: () => Navigator.of(context).pop(true),
-            child: const Text('Leave'),
+            onPressed: () => Navigator.of(context).pop('save'),
+            child: const Text('Save and leave'),
           ),
         ],
       ),
     );
-    return leave ?? false;
+    if (choice == 'discard') {
+      await ref.read(testControllerProvider.notifier).abandon();
+    }
+    return choice == 'save' || choice == 'discard';
   }
 
   @override

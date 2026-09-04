@@ -8,6 +8,7 @@ import '../theme/app_theme.dart';
 import '../widgets/answer_widgets.dart';
 import '../widgets/favorite_button.dart';
 import '../widgets/primary_button.dart';
+import 'fix_misses_screen.dart';
 import 'study_questions_screen.dart';
 
 /// The end of a practice test.
@@ -39,6 +40,32 @@ class _TestResultScreenState extends ConsumerState<TestResultScreen> {
     await ref.read(reviewServiceProvider).requestReview();
   }
 
+  /// Retrying redraws the run, which clears the answers and explanations the
+  /// user is reading. That is worth one question first.
+  Future<void> _confirmRetry(BuildContext context) async {
+    final bool? again = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        title: const Text('Start this test again?'),
+        content: const Text(
+          'The answers and explanations below will be cleared. Your best score '
+          'is kept, and these questions stay in "Fix your misses".',
+        ),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Keep reading'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Start again'),
+          ),
+        ],
+      ),
+    );
+    if (again ?? false) ref.read(testControllerProvider.notifier).start();
+  }
+
   @override
   Widget build(BuildContext context) {
     final TestRunState state = ref.watch(testControllerProvider);
@@ -51,7 +78,13 @@ class _TestResultScreenState extends ConsumerState<TestResultScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Your results'),
-          automaticallyImplyLeading: false,
+          // An explicit way out, so a long list of missed questions never has
+          // to be scrolled past to leave.
+          leading: IconButton(
+            icon: const Icon(Icons.close),
+            tooltip: 'Back to tests',
+            onPressed: () => Navigator.of(context).pop(),
+          ),
         ),
         body: SafeArea(
           child: ListView(
@@ -89,11 +122,31 @@ class _TestResultScreenState extends ConsumerState<TestResultScreen> {
                 ],
               ],
               const SizedBox(height: 10),
-              PrimaryButton(
-                label: 'Try this test again',
-                icon: Icons.refresh,
-                onPressed: () => ref.read(testControllerProvider.notifier).start(),
-              ),
+              // Practising the misses is the more useful next step, so it
+              // leads. Retrying reshuffles this run and clears the review
+              // above, so it asks first when there is something to lose.
+              if (missed.isNotEmpty) ...<Widget>[
+                PrimaryButton(
+                  label: missed.length == 1
+                      ? 'Practice this question'
+                      : 'Practice these ${missed.length} questions',
+                  icon: Icons.healing_outlined,
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(builder: (_) => const FixMissesScreen()),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                PrimaryButton.tonal(
+                  label: 'Try this test again',
+                  icon: Icons.refresh,
+                  onPressed: () => _confirmRetry(context),
+                ),
+              ] else
+                PrimaryButton(
+                  label: 'Try this test again',
+                  icon: Icons.refresh,
+                  onPressed: () => ref.read(testControllerProvider.notifier).start(),
+                ),
               const SizedBox(height: 12),
               PrimaryButton.tonal(
                 label: 'Back to tests',

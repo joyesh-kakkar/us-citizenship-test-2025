@@ -21,6 +21,7 @@ class PracticeTestsScreen extends ConsumerWidget {
     final List<PracticeTest> tests = ref.watch(numberedTestsProvider);
     final PracticeTest starred = ref.watch(starredTestProvider);
     final int passed = ref.watch(testsPassedProvider);
+    final String? resumableId = ref.watch(resumableTestProvider);
     final TextTheme text = Theme.of(context).textTheme;
 
     return Scaffold(
@@ -55,6 +56,7 @@ class PracticeTestsScreen extends ConsumerWidget {
                 return TestCard(
                   test: test,
                   status: ref.watch(testStatusProvider(test.id)),
+                  resumable: test.id == resumableId,
                   onTap: () => _openTest(context, test),
                 );
               },

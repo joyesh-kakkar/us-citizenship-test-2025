@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/question_bank.dart';
 import '../state/providers.dart';
 import '../theme/app_theme.dart';
+import 'search_screen.dart';
 import 'study_questions_screen.dart';
 
 /// Study, level 1: the three official categories.
@@ -16,7 +17,18 @@ class StudyCategoriesScreen extends ConsumerWidget {
     final List<String> categories = bank.categories;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Study')),
+      appBar: AppBar(
+        title: const Text('Study'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search),
+            tooltip: 'Search questions',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView.separated(
           padding: kPagePadding,

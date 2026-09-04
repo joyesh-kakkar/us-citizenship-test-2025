@@ -58,9 +58,16 @@ abstract final class PrefsKeys {
   static const String cachedRemoteConfig = 'remoteConfig.json';
   static const String cachedRemoteConfigFetchedAt = 'remoteConfig.fetchedAt';
 
+  /// A practice test the user left part-way through, so it can be resumed.
+  static const String activeRun = 'tests.activeRun';
+
   /// Cleared by "reset progress". Deliberately excludes the cached config, the
   /// chosen scope, theme, and favorites, which are settings rather than
   /// progress.
+  ///
+  /// [reviewPrompted] is also excluded: "asked for a review once, ever" is a
+  /// promise to the user, not progress, and starting over must not re-arm the
+  /// prompt.
   static const List<String> progressKeys = <String>[
     everCorrectIds,
     missedIds,
@@ -68,6 +75,6 @@ abstract final class PrefsKeys {
     quizCorrect,
     practiceDays,
     testResults,
-    reviewPrompted,
+    activeRun,
   ];
 }

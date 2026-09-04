@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' show ThemeMode;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../data/active_run_store.dart';
 import '../data/progress_store.dart';
 import '../data/remote_config_service.dart';
 import '../data/review_service.dart';
@@ -62,6 +63,23 @@ final Provider<RemoteConfigService> remoteConfigServiceProvider =
 final Provider<TestResultsStore> testResultsStoreProvider = Provider<TestResultsStore>(
   (Ref ref) => TestResultsStore(ref.watch(sharedPreferencesProvider)),
 );
+
+final Provider<ActiveRunStore> activeRunStoreProvider = Provider<ActiveRunStore>(
+  (Ref ref) => ActiveRunStore(ref.watch(sharedPreferencesProvider)),
+);
+
+/// The id of the practice test the user left part-way through, if any, so the
+/// tests list can offer to resume it. Invalidated whenever a run starts,
+/// is abandoned, or finishes.
+class ResumableTestNotifier extends Notifier<String?> {
+  @override
+  String? build() => ref.watch(activeRunStoreProvider).savedTestId();
+
+  void refresh() => state = ref.read(activeRunStoreProvider).savedTestId();
+}
+
+final NotifierProvider<ResumableTestNotifier, String?> resumableTestProvider =
+    NotifierProvider<ResumableTestNotifier, String?>(ResumableTestNotifier.new);
 
 /// The native store-review prompt. Overridden with a no-op in widget tests so
 /// they never reach the platform channel.
@@ -138,8 +156,23 @@ class ProgressNotifier extends Notifier<Progress> {
   @override
   Progress build() => ref.watch(progressStoreProvider).load();
 
-  Future<void> record({required int questionId, required bool correct}) async {
-    state = state.recordAnswer(questionId: questionId, correct: correct);
+  Future<void> record({required int questionId, required bool correct}) =>
+      recordAll(<({int questionId, bool correct})>[
+        (questionId: questionId, correct: correct),
+      ]);
+
+  /// Records a whole batch in one write.
+  ///
+  /// A finished practice test lands 20 answers at once; saving each one
+  /// separately meant ~40 sequential `SharedPreferences` writes on the tap that
+  /// finishes a test, which is both slow and a window for a double-tap.
+  Future<void> recordAll(List<({int questionId, bool correct})> answers) async {
+    if (answers.isEmpty) return;
+    Progress next = state;
+    for (final ({int questionId, bool correct}) a in answers) {
+      next = next.recordAnswer(questionId: a.questionId, correct: a.correct);
+    }
+    state = next;
     await ref.read(progressStoreProvider).save(state);
     // Answering anything counts as practising today, feeding the streak. This
     // runs after awaits, so guard against the provider scope having been torn
@@ -317,6 +350,40 @@ final Provider<List<Question>> missedQuestionsProvider = Provider<List<Question>
   final List<Question> quizzable = ref.watch(quizzablePoolProvider);
   return quizzable.where((Question q) => missed.contains(q.id)).toList(growable: false);
 });
+
+/// The category with the most ground left to cover, or null when there is
+/// nothing useful to target — everything is known, or no category has
+/// quizzable questions left to practise.
+///
+/// Statistics already shows per-category mastery; this is what makes that
+/// dashboard actionable rather than merely informative.
+final Provider<String?> weakestCategoryProvider = Provider<String?>((Ref ref) {
+  final MasterySnapshot mastery = ref.watch(masteryProvider);
+  final List<Question> quizzable = ref.watch(quizzablePoolProvider);
+
+  String? weakest;
+  double worst = double.infinity;
+  for (final MapEntry<String, (int, int)> e in mastery.perCategory.entries) {
+    final (int known, int total) = e.value;
+    if (total == 0 || known >= total) continue;
+    // Only offer a topic we can actually build a quiz from.
+    if (!quizzable.any((Question q) => q.category == e.key)) continue;
+    final double fraction = known / total;
+    if (fraction < worst) {
+      worst = fraction;
+      weakest = e.key;
+    }
+  }
+  return weakest;
+});
+
+/// The quizzable questions in one category, for a topic-targeted practice run.
+final categoryPoolProvider = Provider.family<List<Question>, String>(
+  (Ref ref, String category) => ref
+      .watch(quizzablePoolProvider)
+      .where((Question q) => q.category == category)
+      .toList(growable: false),
+);
 
 /// Per-category mastery (fraction answered correctly at least once), plus the
 /// headline readiness figure, for the Statistics dashboard and Home meter.

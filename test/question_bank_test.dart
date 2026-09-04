@@ -201,4 +201,56 @@ void main() {
       expect(repo.load(), throwsFormatException);
     });
   });
+
+  group('search', () {
+    test('finds a question by a word in its text', () async {
+      final QuestionBank bank = await loadRealBank();
+      final List<Question> hits = bank.search('Speaker');
+
+      expect(hits, isNotEmpty);
+      expect(
+        hits.first.question.toLowerCase(),
+        contains('speaker'),
+        reason: 'a question-text match must outrank matches found elsewhere',
+      );
+    });
+
+    test('finds a question by its official answer', () async {
+      final QuestionBank bank = await loadRealBank();
+      final List<Question> hits = bank.search('1787');
+
+      expect(hits, isNotEmpty);
+      expect(
+        hits.any((Question q) =>
+            q.correctAnswers.any((String a) => a.contains('1787')) ||
+            q.question.contains('1787')),
+        isTrue,
+      );
+    });
+
+    test('every word must match, so extra words narrow the result', () async {
+      final QuestionBank bank = await loadRealBank();
+      final int broad = bank.search('president').length;
+      final int narrow = bank.search('president vice').length;
+
+      expect(broad, greaterThan(0));
+      expect(narrow, lessThanOrEqualTo(broad));
+    });
+
+    test('is case- and whitespace-insensitive', () async {
+      final QuestionBank bank = await loadRealBank();
+      expect(bank.search('  CONSTITUTION  '), equals(bank.search('constitution')));
+    });
+
+    test('an empty or blank query returns nothing rather than everything', () async {
+      final QuestionBank bank = await loadRealBank();
+      expect(bank.search(''), isEmpty);
+      expect(bank.search('    '), isEmpty);
+    });
+
+    test('a query that matches nothing returns an empty list', () async {
+      final QuestionBank bank = await loadRealBank();
+      expect(bank.search('zzzznotaword'), isEmpty);
+    });
+  });
 }

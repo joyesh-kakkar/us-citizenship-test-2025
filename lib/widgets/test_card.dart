@@ -13,6 +13,7 @@ class TestCard extends StatelessWidget {
     required this.status,
     required this.onTap,
     this.width,
+    this.resumable = false,
   });
 
   final PracticeTest test;
@@ -21,6 +22,9 @@ class TestCard extends StatelessWidget {
 
   /// Fixed width for the horizontal Home strip; null lets it fill its parent.
   final double? width;
+
+  /// True when this test was left part-way through and can be picked up.
+  final bool resumable;
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +35,15 @@ class TestCard extends StatelessWidget {
     final Widget card = AppCard(
       onTap: onTap,
       padding: const EdgeInsets.all(16),
-      border: passed ? Border.all(color: sem.success, width: 1.5) : null,
+      border: resumable
+          ? Border.all(color: sem.accent, width: 1.5)
+          : passed
+              ? Border.all(color: sem.success, width: 1.5)
+              : null,
       semanticLabel: <String>[
         test.title,
         '${test.questionCount} questions',
+        if (resumable) 'in progress',
         if (passed) 'passed' else if (status.attempted) 'best ${status.bestPercent} percent',
       ].join(', '),
       child: Column(
@@ -44,12 +53,22 @@ class TestCard extends StatelessWidget {
           Row(
             children: <Widget>[
               Icon(
-                passed ? Icons.verified : Icons.article_outlined,
+                resumable
+                    ? Icons.play_circle_outline
+                    : passed
+                        ? Icons.verified
+                        : Icons.article_outlined,
                 size: 24,
-                color: passed ? sem.success : Theme.of(context).colorScheme.primary,
+                color: resumable
+                    ? sem.accent
+                    : passed
+                        ? sem.success
+                        : Theme.of(context).colorScheme.primary,
               ),
               const Spacer(),
-              if (passed)
+              if (resumable)
+                _Pill(text: 'Resume', fg: sem.accent, bg: sem.accent.withValues(alpha: 0.14))
+              else if (passed)
                 _Pill(text: 'Passed', fg: sem.successFg, bg: sem.successTint)
               else if (status.attempted)
                 _Pill(

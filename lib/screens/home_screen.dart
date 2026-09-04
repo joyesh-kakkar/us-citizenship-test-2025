@@ -18,6 +18,7 @@ import 'fix_misses_screen.dart';
 import 'flashcards_screen.dart';
 import 'practice_tests_screen.dart';
 import 'quiz_screen.dart';
+import 'search_screen.dart';
 import 'settings_screen.dart';
 import 'statistics_screen.dart';
 import 'study_categories_screen.dart';
@@ -37,6 +38,7 @@ class HomeScreen extends ConsumerWidget {
     final List<PracticeTest> tests = ref.watch(numberedTestsProvider);
     final PracticeTest starred = ref.watch(starredTestProvider);
     final bool quizEmpty = ref.watch(scopedPoolProvider).isEmpty;
+    final String? resumableId = ref.watch(resumableTestProvider);
     final TextTheme text = Theme.of(context).textTheme;
 
     return Scaffold(
@@ -47,6 +49,8 @@ class HomeScreen extends ConsumerWidget {
             _GreetingBar(streak: streak),
             const SizedBox(height: 16),
             _ReadinessCard(mastery: mastery),
+            const SizedBox(height: 16),
+            _SearchRow(onTap: () => _push(context, const SearchScreen())),
             const SizedBox(height: 24),
 
             // Practice tests strip.
@@ -72,6 +76,7 @@ class HomeScreen extends ConsumerWidget {
                       TestCard(
                         test: t,
                         status: ref.watch(testStatusProvider(t.id)),
+                        resumable: t.id == resumableId,
                         width: 190,
                         onTap: () => _push(context, TestRunnerScreen(test: t)),
                       ),
@@ -80,6 +85,7 @@ class HomeScreen extends ConsumerWidget {
                     TestCard(
                       test: starred,
                       status: ref.watch(testStatusProvider(starred.id)),
+                      resumable: starred.id == resumableId,
                       width: 190,
                       onTap: () => _push(context, TestRunnerScreen(test: starred)),
                     ),
@@ -173,6 +179,50 @@ class HomeScreen extends ConsumerWidget {
   }
 }
 
+/// Looks like a search field and behaves like a button: tapping it opens the
+/// real search screen with the keyboard already up. A field here would have to
+/// own focus and text state that belongs on that screen.
+class _SearchRow extends StatelessWidget {
+  const _SearchRow({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    return Semantics(
+      button: true,
+      label: 'Search all questions',
+      excludeSemantics: true,
+      child: Material(
+        color: theme.cardTheme.color,
+        borderRadius: AppRadii.controlR,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: AppRadii.controlR,
+          child: Container(
+            constraints: const BoxConstraints(minHeight: kMinTapTarget),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            child: Row(
+              children: <Widget>[
+                Icon(Icons.search, size: 24, color: theme.colorScheme.primary),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Search all questions',
+                    style: theme.textTheme.bodyLarge
+                        ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 /// A row of two equal-width tiles whose height is driven by the taller one's
 /// content, so they scale with the OS text size rather than clipping.
 class _ToolRow extends StatelessWidget {
@@ -195,16 +245,16 @@ class _ToolRow extends StatelessWidget {
   }
 }
 
-class _GreetingBar extends StatelessWidget {
+class _GreetingBar extends ConsumerWidget {
   const _GreetingBar({required this.streak});
 
   final int streak;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final TextTheme text = Theme.of(context).textTheme;
     final AppSemantics sem = context.sem;
-    final int hour = DateTime.now().hour;
+    final int hour = ref.watch(clockProvider)().hour;
     final String greeting = hour < 12
         ? 'Good morning'
         : hour < 18

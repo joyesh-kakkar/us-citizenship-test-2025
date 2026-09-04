@@ -67,6 +67,20 @@ void main() {
     expect(prefs.getString(PrefsKeys.cachedRemoteConfig), isNotNull);
   });
 
+  test('reset does not re-arm the one-time review prompt', () async {
+    final ProgressStore s = await store(<String, Object>{
+      PrefsKeys.reviewPrompted: true,
+    });
+    await s.reset();
+
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    expect(
+      prefs.getBool(PrefsKeys.reviewPrompted),
+      isTrue,
+      reason: '"asked once, ever" is a promise, not progress',
+    );
+  });
+
   test('defaults to the all-questions scope', () async {
     expect((await store()).loadScope(), StudyScope.all);
   });

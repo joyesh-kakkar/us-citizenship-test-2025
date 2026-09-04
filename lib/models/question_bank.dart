@@ -49,6 +49,50 @@ class QuestionBank {
   int countIn(String category) =>
       questions.where((Question q) => q.category == category).length;
 
+  /// Free-text search across the whole bank.
+  ///
+  /// Matches on the question, the official answers, the explanation and the
+  /// topic names, because someone half-remembering "the Speaker of the House"
+  /// may have read it in any of those places. Every word in [query] must match
+  /// somewhere, so extra words narrow rather than widen the result.
+  ///
+  /// Results are ordered by where the match landed — question text first, then
+  /// answers, then everything else — so the most likely hit is at the top.
+  List<Question> search(String query) {
+    final List<String> terms = query
+        .toLowerCase()
+        .split(RegExp(r'\s+'))
+        .where((String t) => t.isNotEmpty)
+        .toList(growable: false);
+    if (terms.isEmpty) return const <Question>[];
+
+    final List<(int rank, Question q)> hits = <(int, Question)>[];
+    for (final Question q in questions) {
+      final String inQuestion = q.question.toLowerCase();
+      final String inAnswers = q.correctAnswers.join(' ').toLowerCase();
+      final String rest =
+          '${q.explanation} ${q.category} ${q.subcategory} ${q.distractors.join(' ')}'
+              .toLowerCase();
+      final String all = '$inQuestion $inAnswers $rest';
+
+      if (!terms.every(all.contains)) continue;
+      hits.add((
+        terms.every(inQuestion.contains)
+            ? 0
+            : terms.every(inAnswers.contains)
+                ? 1
+                : 2,
+        q,
+      ));
+    }
+
+    hits.sort(((int, Question) a, (int, Question) b) {
+      final int byRank = a.$1.compareTo(b.$1);
+      return byRank != 0 ? byRank : a.$2.id.compareTo(b.$2.id);
+    });
+    return <Question>[for (final (int, Question) h in hits) h.$2];
+  }
+
   static List<String> _distinct(Iterable<String> values) {
     final Set<String> seen = <String>{};
     return <String>[

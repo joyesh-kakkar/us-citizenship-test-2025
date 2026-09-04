@@ -107,8 +107,11 @@ class QuizController extends Notifier<QuizState> {
     final Random rng = ref.read(randomProvider);
     Question question = pool[rng.nextInt(pool.length)];
     if (pool.length > 1) {
-      // Avoid asking the same question twice in a row.
-      while (question == _previous) {
+      // Avoid asking the same question twice in a row. Bounded: a pool that
+      // somehow held one question many times over would otherwise spin here
+      // forever, and repeating a question is a far smaller problem than
+      // hanging the UI thread.
+      for (int attempt = 0; attempt < 8 && question == _previous; attempt++) {
         question = pool[rng.nextInt(pool.length)];
       }
     }
@@ -117,5 +120,13 @@ class QuizController extends Notifier<QuizState> {
   }
 }
 
+// Listing [quizPoolProvider] as a dependency is what makes the Fix-your-misses
+// and Favorites `ProviderScope`s work: overriding the dependency re-scopes this
+// provider into that child container, so it draws from the overridden pool
+// rather than the root one. Without this the controller mounts in the root
+// scope and both entry points silently quiz the full scoped pool instead.
 final NotifierProvider<QuizController, QuizState> quizControllerProvider =
-    NotifierProvider<QuizController, QuizState>(QuizController.new);
+    NotifierProvider<QuizController, QuizState>(
+  QuizController.new,
+  dependencies: [quizPoolProvider],
+);
