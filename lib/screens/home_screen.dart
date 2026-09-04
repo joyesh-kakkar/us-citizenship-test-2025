@@ -8,7 +8,6 @@ import '../state/quiz_controller.dart';
 import '../theme/app_theme.dart';
 import '../widgets/app_card.dart';
 import '../widgets/primary_button.dart';
-import '../widgets/scope_toggle.dart';
 import '../widgets/section_header.dart';
 import '../widgets/stat_meter.dart';
 import '../widgets/test_card.dart';
@@ -95,9 +94,8 @@ class HomeScreen extends ConsumerWidget {
             ),
             const SizedBox(height: 24),
 
-            // Scope + main practice.
-            const AppCard(child: ScopeToggle()),
-            const SizedBox(height: 16),
+            // The All-128 / Starred-20 choice lives in Settings only: it is a
+            // preference you set once, not something to re-decide every visit.
             PrimaryButton(
               label: 'Start a quiz',
               icon: Icons.school_outlined,

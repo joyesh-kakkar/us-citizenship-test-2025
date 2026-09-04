@@ -18,6 +18,7 @@ import 'package:civics_test_app/screens/test_screen.dart';
 import 'package:civics_test_app/state/quiz_controller.dart';
 import 'package:civics_test_app/state/test_controller.dart';
 import 'package:civics_test_app/theme/app_theme.dart';
+import 'package:civics_test_app/widgets/scope_toggle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -114,6 +115,24 @@ void main() {
         await scrollTo(tester, find.text(label));
         expect(find.text(label), findsOneWidget);
       }
+    });
+
+    testWidgets('leaves the All/Starred choice to Settings',
+        (WidgetTester tester) async {
+      useSmallPhone(tester);
+      final TestDeps deps = await resolveDeps();
+
+      await tester.pumpWidget(harnessWith(deps, const HomeScreen()));
+      await tester.pumpAndSettle();
+      expect(
+        find.byType(ScopeToggle),
+        findsNothing,
+        reason: 'a set-once preference does not belong on the dashboard',
+      );
+
+      await tester.pumpWidget(harnessWith(deps, const SettingsScreen()));
+      await tester.pumpAndSettle();
+      expect(find.byType(ScopeToggle), findsOneWidget);
     });
 
     testWidgets('greets a first-time user without a streak', (WidgetTester tester) async {
