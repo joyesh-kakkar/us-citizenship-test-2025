@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../config.dart';
 import '../data/remote_config_service.dart';
 import 'privacy_policy_screen.dart';
 import '../models/question_bank.dart';
@@ -119,18 +120,23 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   style: theme.textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 14),
-                FilledButton.icon(
-                  onPressed: _checking ? null : _checkForUpdates,
-                  icon: _checking
-                      ? const SizedBox(
-                          width: 22,
-                          height: 22,
-                          child: CircularProgressIndicator(strokeWidth: 2.5),
-                        )
-                      : const Icon(Icons.refresh, size: 26),
-                  label: Text(_checking ? 'Checking…' : 'Check for updates'),
-                ),
-                const SizedBox(height: 14),
+                // Only offered when a real update address is built in. Without
+                // one the button could do nothing but explain itself, which
+                // reads as an unfinished feature.
+                if (isRemoteConfigUrlConfigured) ...<Widget>[
+                  FilledButton.icon(
+                    onPressed: _checking ? null : _checkForUpdates,
+                    icon: _checking
+                        ? const SizedBox(
+                            width: 22,
+                            height: 22,
+                            child: CircularProgressIndicator(strokeWidth: 2.5),
+                          )
+                        : const Icon(Icons.refresh, size: 26),
+                    label: Text(_checking ? 'Checking…' : 'Check for updates'),
+                  ),
+                  const SizedBox(height: 14),
+                ],
                 _InfoRow(label: 'Answer set', value: config.config.version),
                 _InfoRow(label: 'Last changed', value: config.config.updatedAt),
                 _InfoRow(label: 'Source', value: _sourceLabel(config)),

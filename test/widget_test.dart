@@ -415,7 +415,9 @@ void main() {
       await tester.pumpWidget(harnessWith(deps, const SettingsScreen()));
       await tester.pumpAndSettle();
 
-      await scrollTo(tester, find.text('Check for updates'));
+      // 'Answer set' anchors the same section; the update button only
+      // appears in builds that ship a remote-config URL.
+      await scrollTo(tester, find.text('Answer set'));
       expect(find.text('124'), findsOneWidget);
       expect(find.text('4'), findsOneWidget);
       await scrollTo(tester, find.text('Rate us'));

@@ -3,7 +3,7 @@ description: >-
   Study for the USCIS 2025 civics test with multiple-choice practice.
   Works fully offline.
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ^3.13.0
