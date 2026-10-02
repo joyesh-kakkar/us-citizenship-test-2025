@@ -52,10 +52,11 @@ no AI or machine-learning service. Progress is stored only on the device
 collects no data.
 
 5. REGIONAL DIFFERENCES
-None. The app behaves identically in every region and on every device. The
-content is the U.S. naturalization civics test, which is the same worldwide;
-there is no geo-targeting, no region-gated feature, and no server that could
-vary a response.
+The app is distributed only on the United States App Store. It is not
+offered in China mainland or any other storefront, so no regional
+publication permit applies. Within the U.S. it behaves identically on every
+device: there is no geo-targeting, no region-gated feature, and no server
+that could vary a response.
 
 6. THIRD-PARTY AND REGULATED MATERIAL
 All questions and official answers are taken from the USCIS publication
@@ -72,3 +73,5 @@ CHANGES SINCE THE PREVIOUS SUBMISSION (build 1)
 - Fixed the practice-test grading and question-pool scoping.
 - Added question search and the ability to resume an unfinished test.
 - Moved the study-scope choice (All 128 / Starred 20) into Settings.
+- Limited availability to the United States App Store only; the app is no
+  longer offered in China mainland (Guideline 2.1 publication-permit request).

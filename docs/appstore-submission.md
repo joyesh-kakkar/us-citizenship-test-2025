@@ -208,7 +208,12 @@ Go to **App Information → Age Rating**
 ## Step 11 — Pricing and Availability
 
 - Price: **Free**
-- Availability: All territories (or limit to US only if preferred)
+- Availability: **United States only.** Under Availability, deselect all
+  countries, then select only United States.
+  - Do not include China mainland. Apple requires an Internet Publishing
+    License (网络出版服务许可证) for book/reference content there, which an
+    individual developer cannot obtain. Build 1 was held under Guideline 2.1
+    for exactly this.
 
 ---
 
